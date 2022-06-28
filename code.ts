@@ -12,8 +12,8 @@ let CoverDesc = figma.createText();
 
 figma.currentPage.name = "🖼 Cover";
 Research.name = "🕵️ Research";
-UXDrafts.name = "📋 UX Approaches";
-Archive.name = "      ↳ Archiv"
+UXDrafts.name = "🎛 UX Drafts";
+Archive.name = "      ↳ Archive"
 UIDrafts.name = "🎨 UI Drafts";
 Handover.name = "✅ Handover";
 CoverFrame.name = "Cover";

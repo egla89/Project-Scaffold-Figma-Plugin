@@ -1,27 +1,22 @@
 
 
-let Refferences = figma.createPage();
-let UXApproaches = figma.createPage();
-let ContentApproaches = figma.createPage();
-let UIApproaches = figma.createPage();
-let FinalUI = figma.createPage();
-let Prototype = figma.createPage();
-let Showcase = figma.createPage();
+let Research = figma.createPage();
+let UXDrafts = figma.createPage();
+let Archive = figma.createPage();
+let UIDrafts = figma.createPage();
+let Handover = figma.createPage();
 let Cover = figma.currentPage;
 let CoverFrame = figma.createFrame();
 let CoverHead = figma.createText();
 let CoverDesc = figma.createText();
 
-figma.currentPage.name = "⬜️ Cover";
-Refferences.name = "🔭 References";
-UXApproaches.name = "📋 UX Approaches";
-ContentApproaches.name = "✍🏼 Content Approaches"
-UIApproaches.name = "👁 UI Approaches";
-FinalUI.name = "👍 Final UI";
-Prototype.name = "📱 Prototype";
-Showcase.name = "🖥 Showcase";
+figma.currentPage.name = "🖼 Cover";
+Research.name = "🕵️ Research";
+UXDrafts.name = "🎛 UX Drafts";
+Archive.name = "      ↳ Archive"
+UIDrafts.name = "🎨 UI Drafts";
+Handover.name = "✅ Handover";
 CoverFrame.name = "Cover";
-
 
 
 Cover.appendChild(CoverFrame);
@@ -36,8 +31,8 @@ let xCalculator = (container: FrameNode, element: TextNode) => { return ((contai
 let yCalculator = (container: FrameNode, element: TextNode) => { return ((container.height / 2) - (element.height / 2)); }
 
 let loadFontHead = async (name: string) => {
-  await figma.loadFontAsync({ family: "Roboto", style: "Bold" });
-  CoverHead.fontName = { family: "Roboto", style: "Bold" };
+  await figma.loadFontAsync({ family: "Open Sans", style: "Bold" });
+  CoverHead.fontName = { family: "Open Sans", style: "Bold" };
   CoverHead.characters = name;
   CoverHead.fontSize = 74;
   CoverHead.textAlignHorizontal = "CENTER";
@@ -46,7 +41,7 @@ let loadFontHead = async (name: string) => {
 
 let loadFontDesc = async (text) => {
 
-  await figma.loadFontAsync({ family: "Roboto", style: "Regular" });
+  await figma.loadFontAsync({ family: "Open Sans", style: "Regular" });
   CoverDesc.fontSize = 36;
   CoverDesc.characters = text;
   CoverDesc.textAlignHorizontal = "CENTER";
@@ -64,7 +59,7 @@ let layoutText = () => {
 let run = async ()=>{
 await loadFontHead("Add Heading");
 await loadFontDesc("Add Description");
-figma.notify("Project Scafolding Done 👍")
+figma.notify("Project Scaffolding Done 👍")
 figma.closePlugin();
 }
 
